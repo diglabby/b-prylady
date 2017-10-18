@@ -1,0 +1,9 @@
+<div id='content'>
+  <app-header></app-header>
+  <div class="container" id='back-cont'>
+    <div class="back"></div>
+  </div>
+  <app-admin-menu *ngIf='admin'></app-admin-menu> <!-- *ngIf='admin' -->
+  <router-outlet></router-outlet>
+  <app-footer id='footer'></app-footer>
+</div>
