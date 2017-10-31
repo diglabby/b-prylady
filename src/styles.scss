@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+@import './unicorn-app-theme.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Libre Franklin', sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+h2, h1 {
+    color: #ffdb4d;
+    text-shadow: 1px 1px 2px black;
+    background-color: transparent;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    padding: 30px 0 30px 0;
+    display: block;
+    font-style: oblique;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+#admin-menu {
+    top: 60px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.mat-button {
+	font-size: 14px;
+    font-weight: 500;
+	letter-spacing: 0.4px;
+}
+
+.btn {
+    background-color: rgb(255, 219, 77);
+    color: #000;
+}
+
+.separator {
+   flex: 1 1 auto;
+}
+
+.container {
+    max-width: 70rem;
+    min-height: 30vh;
+    height: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    border-radius: 0 0 5px 5px;
+    background-color: #FFF;
+}
+
+.progressWrapper {
+  max-width: 72.5rem; margin: 0 auto
+}
+
+[hidden] { display: none !important;}
+
+/* background */
+
+.back{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height:50vw;
+  min-height:400px;
+  max-height:550px;
+  min-width:300px;
+  color:#eee;
+  margin: -20px;
+}
+
+.back:after{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+  // http://oky.16mb.com/MYpublic/BTL/
+  background-image: url('assets/img/dott.png');
+  background-repeat: repeat;
+  bottom:0;
+  left:0;
+  z-index: 1;
+  box-shadow: inset 65px 84px 11px -77px rgba(0,0,0,0.37);
+}
+
+.back:before{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+  background: #eee url('assets/img/banner1.jpg') top center no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+  animation: grow 60s  linear 10ms infinite;
+  transition:all 0.2s ease-in-out;
+  z-index: 0;
+}
+
+@keyframes grow{
+  0% { transform:scale(1);}
+  50% { transform:scale(1.2)}
+}
+
+/* friends */
+#friends, #upl-img {
+    width: 100%;
+    height: 100%;
+}
+
+#friends img,
+#upl-img img{
+    filter: saturate(2);
+}
+
+.gallery-top h4 {
+    margin-top: 30px;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+
+.gallery-top {
+    flex-basis: 33.33%;
+    padding: 0;
+}
+
+.gallery-grids {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    overflow: hidden!important;
+    text-align: center;
+}
+
+.effect-bubba {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.img-responsive {
+  max-height: 233px!important;
+  overflow: hidden!important;
+}
+
+.gallery-grids .effect-bubba:hover {
+    background-color: #000;
+}
+
+.gallery-grids .effect-bubba img {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+
+.figcaption {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.gallery-grids .effect-bubba .figcaption::before,
+.gallery-grids .effect-bubba .figcaption::after {
+    pointer-events: none;
+}
+
+
+.effect-bubba:hover img {
+    opacity: 0.3;
+}
+
+.effect-bubba .figcaption::before,
+.effect-bubba .figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    -moz-transition: opacity 0.35s, -moz-transform 0.35s;
+    -o-transition: opacity 0.35s, -o-transform 0.35s;
+    -ms-transition: opacity 0.35s, -ms-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.effect-bubba .figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0, 1);
+    -moz-transform: scale(0, 1);
+    -o-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+.effect-bubba .figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -o-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+}
+
+.effect-bubba h4 {
+    padding-top: 11%;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -o-transition: -o-transform 0.35s;
+    -ms-transition: -ms-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0, -20px, 0);
+    -moz-transform: translate3d(0, -20px, 0);
+    -o-transform: translate3d(0, -20px, 0);
+    -ms-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+}
+
+.gallery-top .effect-bubba h4 {
+    padding-top: 16%;
+}
+
+.effect-bubba:hover .figcaption::before,
+.effect-bubba:hover .figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.effect-bubba:hover h4 {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.mat-form-field {
+    min-width: 100%;
+}
+
+.card-right {
+    overflow: hidden;
+}
+
+@media (max-width: 970px) {
+    h2, h1 {
+      top: 220px;
+      font-size: 1.5em;
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery-top h4 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery-top {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-top {
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+

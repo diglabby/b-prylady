@@ -1,0 +1,12 @@
+<p style='text-align: center' *ngIf='!sent'>Войти</p>
+<p style='text-align: center' *ngIf='sent'>Добро пожаловать в админку</p>
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Логин" formControlName="email" requred  minlength="3" 
+           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$">
+  </mat-form-field>
+   <mat-form-field class="full-width">
+    <input matInput placeholder="Пароль" type="password" formControlName="password" requred  minlength="3">
+  </mat-form-field>
+   <button mat-button type="submit" [disabled]="form.invalid">Войти</button>
+</form>

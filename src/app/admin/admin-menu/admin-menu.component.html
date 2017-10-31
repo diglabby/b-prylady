@@ -1,0 +1,16 @@
+<div class="container unicorn-dark-theme" id='admin-menu' style='position'>
+	<div class='admin-wrapper'>
+      <button mat-button [matMenuTriggerFor]="menuAdmin">
+      	 <mat-icon>more_vert</mat-icon>
+      	 <span class='menu-label'>Админ </span>
+      </button>
+      <mat-menu #menuAdmin="matMenu" class='menu'>
+        <a routerLink="/upload-edit" mat-menu-item>загрузки</a>
+        <a routerLink="/meetings-edit" mat-menu-item>события</a>
+        <a routerLink="/news-edit" mat-menu-item>новости</a>
+        <a routerLink="/friends-edit" mat-menu-item>друзья</a>
+        <a routerLink="/instruction" mat-menu-item>памятка</a>
+        <button  mat-menu-item (click)='logOut()'>выйти</button>
+       </mat-menu>
+    </div>
+</div>
