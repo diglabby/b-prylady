@@ -1,0 +1,20 @@
+<!-- <img src="../../../assets/img/giphy.gif" alt="" > -->
+<p style='text-align: center' *ngIf='!sent'>Оставить сообщение</p>
+<p style='text-align: center' *ngIf='sent'>Сообщение отправлено</p>
+  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Имя" formControlName="firstname" requred  minlength="3">
+    </mat-form-field>
+     <mat-form-field class="full-width">
+      <input matInput placeholder="Фамилия" formControlName="lastname" requred  minlength="3">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Почта" formControlName="email"  required
+            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <textarea matInput  placeholder="Сообщение" rows="3" formControlName="message" requred  minlength="7"></textarea>
+    </mat-form-field>
+    <button mat-button type="submit" [disabled]="form.invalid">Послать</button>
+  </form>
+

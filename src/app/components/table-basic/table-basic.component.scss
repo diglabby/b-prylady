@@ -1,0 +1,39 @@
+h3 {
+  background-color: #fff;
+  font-size: 0.9em;
+  font-weight: 100;
+  min-height: 37px;
+  line-height: 37px;
+  color: rgba(0,0,0,.7);
+  margin: 0;
+  border-bottom: .5px solid #eee;
+ 
+}
+
+.example-container {
+  right: 0;
+  bottom: 0;	
+  position: absolute;	
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  // align-self: center;
+}
+
+.mat-header-row, .mat-row {
+	min-height: 37px;
+	padding: 0 10px;
+}
+.mat-table {
+  overflow: auto;
+}
+
+@media (max-width: 600px){
+  h3 {
+   color: rgba(0,0,0, .8);
+   background-color: rgba(255, 219, 77, 0.5)}
+  .example-container {
+    position: relative;
+    width: 100%;
+  }
+}

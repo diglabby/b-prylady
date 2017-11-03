@@ -1,0 +1,8 @@
+<div class='img-picker'>
+  <mat-dialog-content>
+    <span *ngFor='let img of data | async'>
+			<button mat-button [mat-dialog-close]="img" class='img-button'><img src="{{img.url}}" alt=""></button>
+		</span>
+    </mat-dialog-content>
+</div>
+<button mat-button (click)='onNoClick()'>Закрыть </button>

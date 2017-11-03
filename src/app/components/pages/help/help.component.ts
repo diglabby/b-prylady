@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+import { AppService } from '../../../main-services/app.service';
+
+@Component({
+  selector: 'app-help',
+  templateUrl: './help.component.html',
+  styleUrls: ['./help.component.scss'],
+  providers: [ AppService ]
+})
+export class HelpComponent implements OnInit {
+
+  constructor(private service:AppService) { }
+
+  ngOnInit() {
+  }
+  
+  openMessage(){
+  	this.service.openMessage()
+  }
+}

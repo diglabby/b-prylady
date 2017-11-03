@@ -1,0 +1,14 @@
+<section>
+  <h2>НОВОСТИ</h2>
+  <div *ngIf='showProgress' class='unicorn-dark-theme progressWrapper'>
+    <mat-progress-bar mode="indeterminate" color='accent' class='mat-elevation-z1'>
+    </mat-progress-bar>
+  </div>
+  <div class="container">
+    <div class='wrapper'>
+      <div *ngFor='let article of news | async'>
+        <app-card-item [item]='article' [dateText]="dateText"></app-card-item>
+      </div>
+    </div>
+  </div>
+</section>

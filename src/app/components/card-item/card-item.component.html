@@ -1,0 +1,20 @@
+<mat-card class='clearfix'>
+   <p class='card-date'><span>{{dateText}} </span> {{item.date | date: 'dd/MM/yyyy'}}</p>
+  <mat-card-header class='card-header'>
+     <div mat-card-avatar class="card-header-image"  [ngStyle]="{'background-image': 'url(' + item.avatar + ')'}"></div>
+    <mat-card-title>{{item.title}}</mat-card-title>
+    <mat-card-subtitle>{{item.subtitle}}</mat-card-subtitle>
+
+  </mat-card-header>
+
+  <div class='img-wrapper'>
+    <img src="{{item.url}}" alt='{{item.name}}' class='img mat-elevation-z3'>
+  </div>
+  <mat-card-content>
+    <p>{{item.text}}</p>
+  </mat-card-content>
+  <mat-card-actions class='card-actions'>
+   <div class="ya-share2" data-services="collections,facebook,odnoklassniki,gplus,moimir,vkontakte,twitter,skype" data-limit="6"></div>
+   </mat-card-actions>
+</mat-card>
+
