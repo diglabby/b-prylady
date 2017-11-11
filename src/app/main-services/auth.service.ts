@@ -13,6 +13,7 @@ export class AuthService {
 
   signInWithEmailAndPassword(email, password) {
      this.dbauth.auth.signInWithEmailAndPassword(email, password).then(res => {
+      console.log(res);
       if(res.email === "admin@example.com") {
          this.adminAuth = true;
          this.subscribeAdmin.next(this.adminAuth)

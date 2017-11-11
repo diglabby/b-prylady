@@ -42,6 +42,9 @@ import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
 import { ImgPickerComponent } from './admin/img-picker/img-picker.component';
 import { ConfirmComponent } from './admin/confirm/confirm.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,

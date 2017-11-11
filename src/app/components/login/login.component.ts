@@ -10,12 +10,17 @@ import { AuthService } from '../../main-services/auth.service';
 })
 
 export class LoginComponent {
+  hide = true;
+  brootforce = 0;
+  subscribeAdmin;
   form: FormGroup;
   sent: boolean;
 
   constructor(private fb: FormBuilder, public auth: AuthService) { 
+    this.subscribeAdmin = this.auth.subscribeAdmin.subscribe(value => {
+      this.sent = value
+    })
   	this.createForm();
-    this.sent = false;
   }
   
   createForm() {
@@ -26,8 +31,10 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    this.sent = true;
+    this.brootforce++;
     const { email, password } = this.form.value;
-    this.auth.signInWithEmailAndPassword(email, password);
+    if( this.brootforce < 7) {
+      this.auth.signInWithEmailAndPassword(email, password);
+    } 
   }
 }
