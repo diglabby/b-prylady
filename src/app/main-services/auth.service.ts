@@ -13,10 +13,9 @@ export class AuthService {
 
   signInWithEmailAndPassword(email, password) {
      this.dbauth.auth.signInWithEmailAndPassword(email, password).then(res => {
-      console.log(res);
-      if(res.email === "admin@example.com") {
+     if(res.email === "admin@example.com") {
          this.adminAuth = true;
-         this.subscribeAdmin.next(this.adminAuth)
+         this.subscribeAdmin.next(this.adminAuth);
       }
     }).catch(err => console.log(err))
   }
@@ -26,8 +25,8 @@ export class AuthService {
   }
 
   logOut(){
-    this.dbauth.auth.signOut()
+    this.dbauth.auth.signOut();
     this.adminAuth = false;
-    this.subscribeAdmin.next(this.adminAuth);
+    this.subscribeAdmin.next(this.adminAuth)
   }
 }

@@ -1,7 +1,5 @@
 <?php
  
-header('Content-type: application/json');
- 
 $errors = '';
  
 if(empty($errors))
@@ -17,7 +15,7 @@ if(empty($errors))
 	
 	$email_subject = "Подписка на новости.";
 
-	$headers .= "MIME-Version: 1.0\r\n";
+	$headers  = "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 	$headers .= "From: tlbaranovichy@tut.by\n";
 	$headers .= "Reply-To: $from_email";

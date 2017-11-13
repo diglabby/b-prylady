@@ -5,13 +5,13 @@
 <p style='text-align: center' *ngIf='sent'>Проверьте вашу почту</p>
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field class="full-width">
-    <input matInput placeholder="Имя" formControlName="firstname" requred minlength="3">
+    <input matInput placeholder="Имя" formControlName="firstname" requred minlength="3" maxlength="50">
   </mat-form-field>
   <mat-form-field class="full-width">
-    <input matInput placeholder="Фамилия" formControlName="lastname" requred minlength="3">
+    <input matInput placeholder="Фамилия" formControlName="lastname" requred minlength="3" maxlength="50">
   </mat-form-field>
   <mat-form-field class="full-width">
-    <input matInput placeholder="Почта" formControlName="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$">
+    <input matInput placeholder="Почта" formControlName="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$" maxlength="50">
   </mat-form-field>
   <button mat-button type="submit" class='submit btn' [disabled]="form.invalid">Послать</button>
 </form>

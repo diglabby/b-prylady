@@ -28,7 +28,6 @@ export class MembershipComponent implements OnInit {
       this.b = this.arrCost[1];
       this.c = this.arrCost[2];
       this.d = this.arrCost[3];
-      console.log(this.arrCost[0])
     });
   }
 

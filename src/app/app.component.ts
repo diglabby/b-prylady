@@ -12,12 +12,14 @@ export class AppComponent {
   admin: boolean;
   // subscribe
   subscribeAdmin;
+
  	constructor(private auth: AuthService, @Inject(DOCUMENT) private document) {
   // check admin auth
   this.subscribeAdmin = this.auth.subscribeAdmin.subscribe(() => {
     this.admin = this.auth.adminAuth;
     });
   }
+
   ngAfterViewInit(){
     this.document.getElementById('spinner').setAttribute('style', 'display: none')
   }

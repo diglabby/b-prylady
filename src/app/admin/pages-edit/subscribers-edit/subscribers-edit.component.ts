@@ -47,10 +47,10 @@ export class SubscribersEditComponent implements OnInit{
 
   onSubmit() {
     this.sent = true;
-    const { message, link } = this.form.value;
+    const {  message, link } = this.form.value;
     const mails = this.arrOfEmails.join(',');
     let formRequest = { mails, message, link };
-    console.log(link);
+    //console.log(JSON.stringify(formRequest));
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     if(this.arrOfEmails !== []) {
           this.http.post('/assets/emails.php', JSON.stringify(formRequest), {
