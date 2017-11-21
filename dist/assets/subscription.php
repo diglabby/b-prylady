@@ -21,7 +21,7 @@ if(empty($errors))
 	$headers .= "Reply-To: $from_email";
 
 	$message = "<html><body>";
-	$message .= "<div><p>Уважаемый<strong> ".$firstname." ".$lastname."</strong>,</p></div>";
+	$message .= "<div><p>Уважаемый<strong> ".$firstname." ".$lastname."</strong>.</p></div>";
 	$message .= "<div><p>Данный адрес электронной почты был указан при подписке<br />";
 	$message .= "на новости Библиотеки инструментов Барановичи. <br />";
 	$message .= "Eсли Вы этого не делали, просто удалите это письмо. <br />";

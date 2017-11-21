@@ -25,6 +25,6 @@ if(empty($errors))
 	$message .= "<div>Сообщение: ".$text."</div>";
 	$message .= "</body></html>";
   
-	mail("okylich@tut.by", $email_subject, $message, $headers );
+	mail("tlbaranovichy@tut.by", $email_subject, $message, $headers );
 	return $from_email;
 }

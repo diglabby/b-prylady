@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { AppService } from '../../../main-services/app.service';
+import { SeoService } from '../../../main-services/seo.service';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 @Component({
@@ -13,11 +15,21 @@ export class MembershipComponent implements OnInit {
   arrCost = [];
   a; b; c; d;
   
-  constructor(private service:AppService, private db: AngularFireDatabase) {
+  constructor(
+    private service:AppService, 
+    private db: AngularFireDatabase,
+    private title: Title, 
+    private seo: SeoService ) {
     this.costRef = db.list('cost');
   }
 
  ngOnInit(){
+    this.title.setTitle('Членство');
+    this.seo.generateTags({
+      title: "Членство",
+      description: 'Станьте участником нашей библиотеки инструментов.',
+      slug: 'membership'
+    });
     this.costRef.valueChanges().subscribe(action => {
       this.arrCost = [];
       for (var key in action) {

@@ -119,6 +119,7 @@ a {
   background: #eee url('assets/img/banner1.jpg') top center no-repeat;
   background-size:cover;
   background-attachment:fixed;
+  animation-delay: 5s;
   animation: grow 60s  linear 10ms infinite;
   transition:all 0.2s ease-in-out;
   z-index: 0;

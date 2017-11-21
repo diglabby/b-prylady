@@ -8,7 +8,7 @@ import { subscribersEditRouter } from './subscribers-edit.router';
 
 @NgModule({
   imports: [
-  	CommonModule,
+    CommonModule,
     subscribersEditRouter,
     FormsModule,
     ReactiveFormsModule,

@@ -18,6 +18,7 @@ import { routing, appRoutingProviders } from './app.routes';
 
 // providers
 import { AuthService } from './main-services/auth.service';
+import { SeoService } from './main-services/seo.service';
 
 //firebase
 import { AngularFireModule } from 'angularfire2';
@@ -78,7 +79,7 @@ import { ConfirmComponent } from './admin/confirm/confirm.component';
     ImgPickerComponent,
     ConfirmComponent 
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, SeoService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
