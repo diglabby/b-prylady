@@ -18,6 +18,7 @@ import { routing, appRoutingProviders } from './app.routes';
 
 // providers
 import { AuthService } from './main-services/auth.service';
+import { SeoService } from './main-services/seo.service';
 
 //firebase
 import { AngularFireModule } from 'angularfire2';
@@ -41,6 +42,9 @@ import { LoginComponent } from './components/login/login.component';
 import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
 import { ImgPickerComponent } from './admin/img-picker/img-picker.component';
 import { ConfirmComponent } from './admin/confirm/confirm.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -75,7 +79,7 @@ import { ConfirmComponent } from './admin/confirm/confirm.component';
     ImgPickerComponent,
     ConfirmComponent 
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, SeoService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

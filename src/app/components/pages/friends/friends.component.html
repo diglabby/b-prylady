@@ -9,7 +9,7 @@
       <div class="gallery-grids">
         <div class="gallery-top" *ngFor="let friend of friends | async">
           <div class="effect-bubba">
-            <a href="{{friend.link}}" target='_blank'>
+            <a href="{{friend.link}}" rel="noopener" target='_blank'>
             <img src="{{friend.url}}" alt="" class="img-responsive">
             <div class='figcaption'>
               <h4>{{friend.title}}</h4>

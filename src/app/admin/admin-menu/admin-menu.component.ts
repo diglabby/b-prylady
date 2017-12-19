@@ -6,11 +6,9 @@ import { AuthService } from '../../main-services/auth.service';
   selector: 'app-admin-menu',
   templateUrl: './admin-menu.component.html',
   styleUrls: ['./admin-menu.component.scss'],
-  providers: [ AuthService ]
 })
-export class AdminMenuComponent {
-  constructor(private auth: AuthService) {
 
-  }
+export class AdminMenuComponent {
+  constructor(private auth: AuthService) {}
   logOut() { this.auth.logOut() }
 }

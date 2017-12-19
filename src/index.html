@@ -3,16 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Baranovichytools</title>
+  <title>Барановичская библиотека инструментов</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Библиотека инструментов позволяет участникам брать инструменты, оборудование и руководства к ним в течение определенного периода времени, как правило, бесплатно. Мы сообщество единомышленников в области 'Сделай сам'. ">
+  <meta name="keywords" content='бесплатно, строительный, инструмент, оборудование, как сделать, своими руками, перфоратор, пила, шуруповерт, рубанок, нивелиры'>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+  <!-- seo for social linkbots -->
+  <meta property="og:type" content='article'>
+  <meta property='og:site_name' content='Барановичская библиотека инструментов'>
+  <meta property='og:title' content='Главная страница'>
+  <meta property='og:image' content='https://baranovichytools.ru/assets/img/BTLlogo.png'>
+  <meta property='og:description' content="Инструменты на все случаи жизни">
+  <meta property='og:url' content='https://baranovichytools.ru'>
+  <!--  pwa -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#323941" />
+  <meta name="msapplication-starturl" content="/">
+  <link rel="manifest" href="/manifest.json">
   <style>
   body {
     background-color: #323941;
     margin: 0;
   }
+
   #spinner {
     position: absolute;
     top: calc(50vh - 32.5px);
@@ -86,7 +102,7 @@
     }
   }
 
- </style>
+  </style>
 </head>
 
 <body>
@@ -95,6 +111,25 @@
   </svg>
   <app-root></app-root>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script>
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for (let registration of registrations) {
+      registration.unregister()
+    }
+  });
+
+  </script>
+  <!--  Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109851362-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109851362-1');
+
+  </script>
 </body>
 
 </html>
